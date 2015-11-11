@@ -22,6 +22,9 @@
                 <% } else { %>
         	       <a href="/profile"><%= user.username %>'s Current Commissions</a>
                 <% } %></li>
+                <li><% if (user) { %>
+                    <a href="/logout">Log out</a>
+                <% } %></li>
             </ul>
         </div>
         <div class="nav">
@@ -30,16 +33,31 @@
       	    </div>
         </div>
  
-        <div class="container">
-            <h1><%= user.displayName %><br/></h1>
-            <p>
-            Username: <%= user.username %><br/>
-            <% if (user.emails) { %>
-            Email: <%= user.emails[0].value %><br/>
-            <% } %>
-            ID: <%= user.id %><br/>
-            </p>
-            <a href="/logout">Log out</a>
+        <div class="container-fluid text-center" id="comissions">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h1><%= user.displayName %><br/></h1>
+                </div>
+                <div class="col-sm-4">
+                    <h3>
+                        <% if (user.emails) { %>
+                        Email: <%= user.emails[0].value %><br/>
+                        <% } %>
+                    </h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Username: <%= user.username %><br/></h3>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <h2>
+                    Comission: <%= user.commission %><br />
+                </h2>
+                <h3>
+                    Commission Progress:<br />
+                </h3>
+                <img id="comission" src="<%= user.comImage %>" />
+            </div>
         </div>
     
         <div class = "container-fluid text-center" id="footer">

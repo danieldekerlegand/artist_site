@@ -22,9 +22,12 @@
         <li><a href="/aboutme">About Me</a></li>
         <li><a href="/contact">Contact</a></li>
         <li><% if (!user) { %>
-           <a href="/login"><span class="glyphicon glyphicon-user"></span> Commission Login</a>
+	       <a href="/login"><span class="glyphicon glyphicon-user"></span> Commission Login</a>
         <% } else { %>
-           <a href="/profile"><%= user.username %>'s Current Commissions</a>
+	       <a href="/profile"><%= user.username %>'s Current Commissions</a>
+        <% } %></li>
+        <li><% if (user) { %>
+            <a href="/logout">Log out</a>
         <% } %></li>
       </ul>
     </div>

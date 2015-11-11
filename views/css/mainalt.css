@@ -254,3 +254,13 @@ body {
 .form-group {
   padding-left: 50px;
 }
+
+#comissions {
+  height: 500px;
+  overflow: auto;
+}
+
+#comission {
+  width: 100%;
+  height: auto;
+}
