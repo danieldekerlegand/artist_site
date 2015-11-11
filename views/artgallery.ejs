@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>Louis Braquet | About Me</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/mainalt.css">
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/artgallery">Art Gallery</a></li>
+        <li><a href="/forsale">For Sale</a></li>
+        <li><a href="/commissions">Commissions</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/aboutme">About Me</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><% if (!user) { %>
+           <a href="/login"><span class="glyphicon glyphicon-user"></span> Commission Login</a>
+        <% } else { %>
+           <a href="/profile"><%= user.username %>'s Current Commissions</a>
+        <% } %></li>
+      </ul>
+    </div>
+    <div class="nav">
+      <div class ="container">
+	       <div class="icon-menu"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+	    </div>
+    </div>
+    <div class="content">
+      <div class="description">
+        <h3>Art Gallery</h3>
+        <p>A selection of works both past and present.</p>
+        
+        <div class="slider">
+  		    <div class="slide active-slide">
+            <div class="container">
+              <div class="row">
+                <div class="slide-copy col-xs-5">
+                  <h1>"Musidora"</h1>
+                  <p>Work in progress. 2015.</p>
+                </div>
+                <div class="slide-img col-xs-7">
+                  <img src="https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11123906_376850539190232_1812334823_n.jpg" height="450px" width="450px">
+                </div>
+              </div>
+            </div>      
+          </div>
+  
+          <div class="slide">
+            <div class="container">
+              <div class="row">
+                <div class="slide-copy col-xs-5">
+                  <h1>"Lamia"</h1>
+                  <p>Work in progress. 2015.</p>
+                </div>
+                <div class="slide-img col-xs-7">
+                  <img src="https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11055743_837877202952120_560571830_n.jpg" height="450px" width="450px">
+                </div>
+              </div>
+            </div>      
+          </div> 
+    
+          <div class="slide">
+            <div class="container">
+              <div class="row">
+                <div class="slide-copy col-xs-5">
+                  <h1>"Curses, Invocations"</h1>
+                  <p>Work in progress. 2015.</p>
+                </div>
+                <div class="slide-img col-xs-7">
+                  <img src="https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/10954812_1592591114317592_634517544_n.jpg" height="450px" width="450px">
+                </div>
+              </div>
+            </div>      
+          </div> 
+    
+          <div class="slide">
+            <div class="container">
+              <div class="row">
+                <div class="slide-copy col-xs-5">
+                  <h1>"Pandora"</h1>
+                  <p>Work in progress. 2015.</p>
+                </div>
+                <div class="slide-img col-xs-7">
+                  <img src="https://igcdn-photos-e-a.akamaihd.net/hphotos-ak-xpa1/t51.2885-15/1391328_1645306602357804_975551219_n.jpg" height="450px" width="450px">
+                </div>
+              </div>
+            </div>      
+          </div> 
+  
+        </div>
+
+        <div class="slider-nav">
+          <a href="#" class="arrow-prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          <ul class="slider-dots">
+            <li class="dot active-dot">&bull;</li>
+            <li class="dot">&bull;</li>
+            <li class="dot">&bull;</li>
+            <li class="dot">&bull;</li>
+          </ul>
+          <a href="#" class="arrow-next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div> 
+      </div>
+    </div>
+    <script src="js/carouselapp.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

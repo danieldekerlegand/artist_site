@@ -1,0 +1,57 @@
+<html>
+   <head>
+      <title>Louis Braquet | Art</title>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="/css/mainalt.css">
+   </head>
+   <body>
+        <div class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/artgallery">Art Gallery</a></li>
+                <li><a href="/forsale">For Sale</a></li>
+                <li><a href="/commissions">Commissions</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/aboutme">About Me</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><% if (!user) { %>
+        	       <a href="/login"><span class="glyphicon glyphicon-user"></span> Commission Login</a>
+                <% } else { %>
+        	       <a href="/profile"><%= user.username %>'s Current Commissions</a>
+                <% } %></li>
+            </ul>
+        </div>
+        <div class="nav">
+            <div class ="container">
+      	       <div class="icon-menu"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+      	    </div>
+        </div>
+ 
+        <div class="container">
+            <h1><%= user.displayName %><br/></h1>
+            <p>
+            Username: <%= user.username %><br/>
+            <% if (user.emails) { %>
+            Email: <%= user.emails[0].value %><br/>
+            <% } %>
+            ID: <%= user.id %><br/>
+            </p>
+            <a href="/logout">Log out</a>
+        </div>
+    
+        <div class = "container-fluid text-center" id="footer">
+            <div class="row">
+              <div class="col-sm-4">
+              </div>
+              <div class="col-sm-4">
+              </div>
+              <div class="col-sm-4">
+              </div>
+            </div>
+        </div>
+        <script src="js/menu.js"></script>
+    </body>
+</html>

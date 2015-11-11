@@ -1,0 +1,45 @@
+<html>
+<html lang="en">
+  <head>
+      <title>Louis Braquet | About Me</title>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="/css/mainalt.css">
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/artgallery">Art Gallery</a></li>
+        <li><a href="/forsale">For Sale</a></li>
+        <li><a href="/commissions">Commissions</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/aboutme">About Me</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><% if (!user) { %>
+           <a href="/login"><span class="glyphicon glyphicon-user"></span> Commission Login</a>
+        <% } else { %>
+           <a href="/profile"><%= user.username %>'s Current Commissions</a>
+        <% } %></li>
+      </ul>
+    </div>
+    <div class="nav">
+      <div class ="container">
+	       <div class="icon-menu"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+	    </div>
+    </div>
+
+    <div class="content">
+      <div class="description">
+        <h3>Blog</h3>
+  	  <p>Here, you can follow my recent work.</p>
+      </div>
+    </div>
+    <script src="js/menu.js"></script>
+  </body>
+</html>
