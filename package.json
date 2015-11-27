@@ -5,15 +5,15 @@
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.12.4",
+    "connect-ensure-login": "0.1.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "0.2.2",
     "ejs": "^2.3.1",
     "express": "^4.12.4",
     "express-session": "1.11.3",
+    "morgan": "1.6.1",
     "passport": "^0.3.0",
-    "passport-local": "^1.0.0",
-    "cookie-parser": "0.2.2",
-    "connect-ensure-login": "0.1.1",
-    "connect-flash": "0.3.0",
-    "morgan": "1.6.1"
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
